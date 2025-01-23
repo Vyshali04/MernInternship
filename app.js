@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json()); // used to paarse the data
 
-mongoose.connect("mongodb://localhost:27017/expenses").then(() => {
+mongoose.connect("mongodb+srv://vyshali:vyshu1808@cluster.sabqg.mongodb.net/expenses").then(() => {
   console.log("connected to database");
 });
 const expenseSchema = new mongoose.Schema({
@@ -91,3 +91,4 @@ app.put("/api/expenses/:id", async (req, res) => {
 app.listen(3000, () => {
   console.log("Server is running");
 });
+
